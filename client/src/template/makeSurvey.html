@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create New Survey - Survey App</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    {% load static %}
+    <link rel="shortcut icon" type="image/png" href="{% static '/style/favicon.ico' %}"/>
+</head>
+<body class="bg-gray-100 min-h-screen flex flex-col">
+    <header class="bg-white shadow">
+        <div class="container mx-auto flex items-center justify-between p-4">
+            <h1 class="text-xl font-bold text-blue-600">Survey App</h1>
+            <div class="space-x-4">
+                <a href="{% url 'about' %}" class="text-gray-700 hover:text-blue-500">About</a>
+                <a href="{% url 'dashboard' %}" class="text-gray-700 hover:text-blue-500">Dashboard</a>
+                <a href="{% url 'main' %}" class="text-gray-700 hover:text-blue-500">Home</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="container mx-auto mt-6 flex-1">
+        <div class="bg-white shadow rounded-lg p-6">
+            <h2 class="text-2xl font-bold text-gray-800">Create a New Survey</h2>
+            <div class="mt-4">
+                <label class="block text-gray-700">Survey Title</label>
+                <input id="title-box" type="text" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Enter survey title">
+                
+                <label class="block text-gray-700 mt-4">Description</label>
+                <textarea id="desc-box" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Enter survey description"></textarea>
+                
+                <label class="block text-gray-700 mt-4">Answers (comma-separated)</label>
+                <input id="ans-box" type="text" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Option1, Option2, Option3">
+                
+                <div class="mt-4">
+                    <input type="checkbox" id="whitelist-toggle">
+                    <label id="whitelist-checkbox" for="whitelist-toggle" class="text-gray-700">Enable Whitelist</label>
+                </div>
+                
+                <div id="whitelist-box-div" class="hidden mt-4 p-4 bg-gray-100 rounded-lg">
+                    <label class="block text-gray-700">Whitelist Users</label>
+                    <input id="whitelist-box" type="text" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Enter user addreses, separated by commas">
+                </div>
+            </div>
+            <button id="submit-btn" class="mt-6 px-4 py-2 bg-green-500 text-white rounded-lg shadow hover:bg-green-600">Create Survey</button>
+        </div>
+    </main>
+
+    <footer class="bg-gray-200 py-4 mt-auto">
+        <div class="container mx-auto text-center text-gray-600">
+            &copy; 2025 Survey App. All rights reserved.
+        </div>
+    </footer>
+
+    {% load static %}
+    <script src="{% static 'app/makeSurvey-app/webpack/dist/output.js' %}"></script> 
+</body>
+</html>

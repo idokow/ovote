@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Survey App</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    {% load static %}
+    <link rel="shortcut icon" type="image/png" href="{% static '/style/favicon.ico' %}"/>
+</head>
+<body class="bg-gray-100 min-h-screen flex flex-col">
+    <header class="bg-white shadow">
+        <div class="container mx-auto flex items-center justify-between p-4">
+            <h1 class="text-xl font-bold text-blue-600">Survey App</h1>
+            <div class="space-x-4">
+                <a href="{% url 'dashboard' %}" class="text-gray-700 hover:text-blue-500">Dashboard</a>
+                <a href="{% url 'main' %}" class="text-gray-700 hover:text-blue-500">Home</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="container mx-auto mt-6 flex-1">
+        <div class="bg-white shadow rounded-lg p-6">
+            <h2 class="text-2xl font-bold text-gray-800">About OVOTE</h2>
+            
+            <div style="margin-top: 15px;">
+                <h3 class="text-xl font-bold text-gray-800">Revolutionizing Surveys with Blockchain Technology</h3>
+                <p class="mt-4 text-gray-700">Welcome to Ovote, the next-generation survey platform powered by the Ethereum blockchain. Our mission is to bring transparency, security, and decentralization to online surveys, ensuring that every response is verifiable, tamper-proof, and anonymous.</p>
+            </div>
+            
+            <div style="margin-top: 15px;">
+                <h3 class="text-xl font-bold text-gray-800">Why Blockchain Surveys?</h3>
+                <p class="mt-4 text-gray-700">
+                    Traditional survey platforms often face issues like data manipulation, privacy breaches, and lack of trust in results. By leveraging blockchain technology, we eliminate these concerns through smart contracts and decentralized data storage, ensuring that:  
+                    ✔️ Immutable Records – Once submitted, survey responses **cannot be altered or deleted.  
+                    ✔️ Fair & Transparent – Every response is publicly verifiable, preventing manipulation.  
+                    ✔️ User Privacy – No central authority controls the data, ensuring anonymity and security.  
+                    ✔️ Decentralized Governance – Surveys operate without a single point of failure, promoting true fairness.  
+                </p>
+            </div>
+
+            <div style="margin-top: 15px;">
+                <h3 class="text-xl font-bold text-gray-800">How It Works</h3>
+                <p class="mt-4 text-gray-700">
+                    1️⃣ Create a Survey – Easily set up a survey using our intuitive interface, choosing between public or whitelisted participation.  
+                    2️⃣ Secure Voting – Participants cast their responses using their Ethereum wallet, preventing duplicate votes.  
+                    3️⃣ Immutable Storage – Responses are recorded on the Ethereum blockchain, ensuring full transparency.  
+                    4️⃣ Results You Can Trust – View survey outcomes in real time, knowing that results are 100% tamper-proof.  
+                </p>
+            </div>
+
+            <div style="margin-top: 15px;">
+                <h3 class="text-xl font-bold text-gray-800">Empowering a Decentralized Future</h3>
+                <p class="mt-4 text-gray-700">We believe in the power of decentralization to restore trust in online surveys. Whether you're conducting market research, community polls, or governance decisions, our platform ensures that every response counts and remains secure forever.</p>
+            </div>
+
+            <h3 style="margin-top: 15px;" class="text-xl font-bold text-gray-800">📜 Smart Contracts Powered by Solidity</h3>
+            <h3 style="margin-top: 15px;" class="text-xl font-bold text-gray-800">🔗 Integrated with Ethereum for Maximum Security</h3>
+            <h3 style="margin-top: 15px;" class="text-xl font-bold text-gray-800">💳 Supports Crypto Incentives for Participation</h3>
+            <h3 style="margin-top: 15px;" class="text-xl font-bold text-gray-800">🚀 Start your survey today and experience the power of blockchain!</h3>
+        </div>
+    </main>
+
+    <footer class="bg-gray-200 py-4 mt-auto">
+        <div class="container mx-auto text-center text-gray-600">
+            &copy; 2025 Survey App. All rights reserved.
+        </div>
+    </footer>
+</body>
+</html>

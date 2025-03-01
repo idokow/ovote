@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Voting</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    {% load static %}
+    <link rel="shortcut icon" type="image/png" href="{% static '/style/favicon.ico' %}"/>
+</head>
+<body class="bg-gray-100">
+    <div class="container mx-auto mt-10 p-6 bg-white shadow-lg rounded-lg max-w-lg">
+        <div style="color: red;">
+            if you voted once dont vote again !!!
+        </div>
+        
+        <h1 id="survey-title" class="text-2xl font-bold text-blue-600 mb-2"></h1>
+        <p id="survey-owner" class="text-sm text-gray-600"></p>
+        <p id="survey-description" class="mt-4 text-gray-700"></p>
+
+        <div id="answers" class="mt-6">
+            <h3 class="text-lg font-semibold">Vote for an option:</h3>
+            <div id="answersDIV"></div>
+            <!-- Answer buttons will be inserted here -->
+        </div>
+
+        <p id="voted-message" style="visibility: hidden;" class="mt-4 text-green-600 font-semibold">Thank you for voting!</p>
+
+        <button id="submit-btn" class="mt-6 px-4 py-2 bg-gray-500 text-white rounded-lg hover:bg-gray-600">
+            Back to Surveys
+        </button>
+    </div>
+
+    <div id="data_from_django" style="visibility: hidden;">{{ surveyID }}</div> 
+
+    {% load static %}
+    <script src="{% static 'app/survey-app/webpack/dist/output.js' %}"></script> 
+</body>
+</html>

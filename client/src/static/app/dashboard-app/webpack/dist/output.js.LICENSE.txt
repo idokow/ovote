@@ -1,0 +1,13 @@
+/*!
+ * EventEmitter2
+ * https://github.com/hij1nx/EventEmitter2
+ *
+ * Copyright (c) 2013 hij1nx
+ * Licensed under the MIT license.
+ */
+
+/*! crc32.js (C) 2014-present SheetJS -- http://sheetjs.com */
+
+/*! noble-curves - MIT License (c) 2022 Paul Miller (paulmillr.com) */
+
+/*! noble-hashes - MIT License (c) 2022 Paul Miller (paulmillr.com) */

@@ -1,0 +1,24 @@
+{
+  "name": "ovote-client",
+  "version": "1.0.0",
+  "author": "Hossein Beygi",
+  "license": "ISC",
+  "description": "client for ovote blockchain app using js and python",
+  "dependencies": {
+    "@metamask/sdk": "^0.32.0",
+    "web3": "^4.16.0",
+    "webpack": "^5.97.1"
+  },
+  "scripts": {
+    "build-main": "webpack --config ./static/app/viewsurvey-app/webpack/webpack.config.js",
+    "build-dashboard": "webpack --config ./static/app/dashboard-app/webpack/webpack.config.js",
+    "build-makeSurvey": "webpack --config ./static/app/makeSurvey-app/webpack/webpack.config.js",
+    "build-survey": "webpack --config ./static/app/survey-app/webpack/webpack.config.js",
+    "build": "webpack --config ./static/app/viewsurvey-app/webpack/webpack.config.js && webpack --config ./static/app/dashboard-app/webpack/webpack.config.js && webpack --config ./static/app/makeSurvey-app/webpack/webpack.config.js && webpack --config ./static/app/survey-app/webpack/webpack.config.js"
+  },
+  "devDependencies": {
+    "@metamask/sdk": "^0.31.5",
+    "webpack-bundle-analyzer": "^4.10.2",
+    "webpack-cli": "^6.0.1"
+  }
+}

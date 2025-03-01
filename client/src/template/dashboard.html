@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Survey App</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    {% load static %}
+    <link rel="shortcut icon" type="image/png" href="{% static '/style/favicon.ico' %}"/>
+</head>
+<body class="bg-gray-100 min-h-screen flex flex-col">
+    <header class="bg-white shadow">
+        <div class="container mx-auto flex items-center justify-between p-4">
+            <h1 class="text-xl font-bold text-blue-600">Survey App</h1>
+            <div class="space-x-4">
+                <a href="{% url 'about' %}" class="text-gray-700 hover:text-blue-500">About</a>
+                <a href="{% url 'main' %}" class="text-gray-700 hover:text-blue-500">Home</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="container mx-auto mt-6 flex-1">
+        <div class="bg-white shadow rounded-lg p-6" id="name-header">
+
+        </div>
+        
+        <div id="survey-list" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
+            <!-- Surveys will be dynamically loaded here -->
+        </div>
+    </main>
+
+    <footer class="bg-gray-200 py-4 mt-auto">
+        <div class="container mx-auto text-center text-gray-600">
+            &copy; 2025 Survey App. All rights reserved.
+        </div>
+    </footer>
+
+    {% load static %}
+    <script src="{% static 'app/dashboard-app/webpack/dist/output.js' %}"></script> 
+</body>
+</html>
