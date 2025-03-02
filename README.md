@@ -8,4 +8,4 @@ https://github.com/user-attachments/assets/1b6b8309-e809-4998-b308-fdde20bd3018
 contract address on sepolia : 0xe4E54B593fabDde4ec46e740Ba0B4B6Ac8160A62
 
 ### - smart contract : solidity
-### - web dapp : python, pure js (+webjs, metamaskSDK)
+### - web dapp : python, pure js (+web3js, metamaskSDK)
